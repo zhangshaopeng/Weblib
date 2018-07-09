@@ -422,13 +422,13 @@ public final class WebUtils {
 
         AgentWebConfig.initCookiesManager(mActivity.getApplicationContext());
         IAgentWebSettings mAgentWebSettings = this.mAgentWebSettings;
-        if (mAgentWebSettings == null) {
-            this.mAgentWebSettings = mAgentWebSettings = AgentWebSettingsImpl.getInstance();
-        }
+//        if (mAgentWebSettings == null) {
+//            this.mAgentWebSettings = mAgentWebSettings = AgentWebSettingsImpl.getInstance();
+//        }
 
-        if (mAgentWebSettings instanceof AbsAgentWebSettings) {
-            ((AbsAgentWebSettings) mAgentWebSettings).bindAgentWeb(this);
-        }
+//        if (mAgentWebSettings instanceof AbsAgentWebSettings) {
+//            ((AbsAgentWebSettings) mAgentWebSettings).bindAgentWeb(this);
+//        }
         if (mWebListenerManager == null && mAgentWebSettings instanceof AbsAgentWebSettings) {
             mWebListenerManager = (WebListenerManager) mAgentWebSettings;
         }

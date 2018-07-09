@@ -16,32 +16,33 @@ import android.webkit.WebViewClient;
  * Email :1377785991@qq.com
  * Data:2018/6/15
  */
-public abstract class AbsAgentWebSettings implements IAgentWebSettings, WebListenerManager {
+public class AbsAgentWebSettings implements IAgentWebSettings, WebListenerManager {
 
     private WebSettings mWebSettings;
     private static final String TAG = AbsAgentWebSettings.class.getSimpleName();
     public static final String USERAGENT_UC = " UCBrowser/11.6.4.950 ";
     public static final String USERAGENT_QQ_BROWSER = " MQQBrowser/8.0 ";
     public static final String USERAGENT_AGENTWEB = AgentWebConfig.AGENTWEB_VERSION;
-    protected WebUtils mAgentWeb;
+//    protected WebUtils mAgentWeb;
 
 
     public static AbsAgentWebSettings getInstance() {
-        return new AgentWebSettingsImpl();
+//        return new AgentWebSettingsImpl();
+        return new AbsAgentWebSettings();
     }
 
 
     public AbsAgentWebSettings() {
 
     }
-
-    final void bindAgentWeb(WebUtils agentWeb) {
-        this.mAgentWeb = agentWeb;
-        this.bindAgentWebSupport(agentWeb);
-
-    }
-
-    protected abstract void bindAgentWebSupport(WebUtils agentWeb);
+//zsp --目前用不到，先注释掉了
+//    final void bindAgentWeb(WebUtils agentWeb) {
+//        this.mAgentWeb = agentWeb;
+//        this.bindAgentWebSupport(agentWeb);
+//
+//    }
+//
+//    protected abstract void bindAgentWebSupport(WebUtils agentWeb);
 
     @Override
     public IAgentWebSettings toSetting(WebView webView) {
