@@ -271,7 +271,10 @@ public final class WebUtils {
         return mIEventHandler.back();
     }
 
-
+    /**
+     * 获取WebCreator创造器，可获取webview对象
+     * @return
+     */
     public WebCreator getWebCreator() {
         return this.mWebCreator;
     }

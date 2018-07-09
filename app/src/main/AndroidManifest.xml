@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoTitle">
-        <activity android:name="com.shao.demo.BaseWebViewActivity">
+        <activity android:name="com.shao.demo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
